@@ -1,0 +1,57 @@
+%--------------------------------------------------------------------------
+% BVP_demo2:  
+%
+% This demo computes the solution of a Boundary Value Problem
+%
+% This reproduces figure ??? from "???", MC De Bonis, V Sagaria, 2025. 
+%
+% Author:  MC De Bonis, V Sagaria
+%
+% Date last modified: May, 2025
+%
+% This file is part of the BVPs package (Boundary Value Problems package)
+% Copyright (C) 2024, MC De Bonis, V Sagaria.
+%
+% The BVPs package is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation.
+%
+% The BVPs package is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with the BVPs package. If not, see <http://www.gnu.org/licenses/>.
+% %% 
+clc
+clear
+close all
+
+fprintf('Welcome to BVP demo #3\n');
+
+% h(t), kind and A(x)=(mu a(x)-1)*exp(x^2/2)
+h = @(x) (1/3*exp(-x.^2.*(1+x.^2)).*(-1+E^x^4 (-7 + 12 x^2)));
+kind = 2;
+A = @(x) (exp(x.^2/2).*(exp(-x.^4)/(x.^2+1)-2)/3); 
+
+% row array of the evaluation points
+t=linspace(-5,5,30000);
+
+fprintf('Running to solve the equivalent Fredholm integral equation \n\n');
+tic
+[fm,C,j,Merr,~] = BVP(kind,h,A,t);
+
+fprintf('m, truncation index j, condition number and maximum error:\n\n');
+fprintf('%d,\t % d,\t  %.4e, \t  %.2e. ',512,j,C,Merr);
+fprintf('\n\n');
+
+fprintf('Plot of the solution of BVP #2\n\n');
+figure
+plot(t,fm,'-k','linewidth',1.5)
+set(gca,'fontsize',14)
+title('Plot of the solution of BVP #2')
+xlabel('t')
+xlim([t(1),t(end)])
+ylabel('f_{512}(t)')
+toc
