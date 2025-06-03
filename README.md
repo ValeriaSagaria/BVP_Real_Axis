@@ -18,21 +18,21 @@ The algorithms implemented here are described in detail in:
 GETTING STARTED
 Run
 
->> BVP_demo1   (Figure 1 from [2,3])
+>> BVP_demo1   (Figure (1) (right) from [2])
 
->> BVP_demo1_1 (Figure 2 from [3])
+>> BVP_demo1_1 (Table 1 and Figure 1 (left) from [2])
 
->> BVP_demo2   (Figure x from [2,3])
+>> BVP_demo2   (Figure 3 (right) from [2])
 
->> BVP_demo2_1 (Figure x from [3])
+>> BVP_demo2_1 (Table  5 and Figure 3 (left) from [2])
 
->> BVP_demo3   (Figure 3 from [2])
+>> BVP_demo3   (Graph of the approximate solution)
 
->> BVP_demo3_1 (Figure 2 from [3])
+>> BVP_demo3_1 (Plot of the trend of the absolute error err_m)
 
->> BVP_demo1   (Figure 1 from [2,3])
+>> BVP_demo4   (Graph of the approximate solution)
 
->> BVP_demo1_1 (Figure 2 from [3])
+>> BVP_demo4_1 (Plot of the trend of the absolute error err_m)
 
 
 as a demonstration of what this package is used for.
