@@ -1,38 +1,40 @@
+(* ::Package:: *)
+
 %--------------------------------------------------------------------------
-% BVP_demo1_1:  
+% BVP_demo1 _ 1:  
 %
 % This demo computes the solution of a Boundary Value Problem
 %
-% This reproduces Table 1 and Figure 1 (left) from [2]
+% This reproduces Table 3 from [2]
 %
 % Author:  MC De Bonis, V Sagaria
 %
-% Date last modified: June, 2025
+% Date last modified: February, 2026
 %
-% This file is part of the BVP_Real_Axis package Copyright (C) 2025, 
+% This file is part of the BVP_Real _Axis package Copyright (C) 2025, 
 % MC De Bonis, V Sagaria.
 %
-% The BVP_Real_Axis package is free software: you can redistribute it 
+% The BVP_Real _Axis package is free software: you can redistribute it 
 % and/or modify it under the terms of the GNU General Public License as 
 % published by the Free Software Foundation.
 %
-% The BVP_Real_Axis package is distributed in the hope that it will be 
+% The BVP_Real _Axis package is distributed in the hope that it will be 
 % useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
 % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 % GNU General Public License for more details.
 %
 % You should have received a copy of the GNU General Public License
-% along with theBVP_Real_Axis package. 
+% along with theBVP_Real _Axis package. 
 % If not, see <http://www.gnu.org/licenses/>.
 clc
 clear
 close all
 
-fprintf('Welcome to BVP demo #1_1\n\n');
+fprintf('Welcome to BVP demo #1 _ 1\n \n');
 addpath('..');
 
 % h(t), kind and A(x)=(mu a(x)-1)*exp(x^2/2)
-h = @(x) 1/25.*exp(-((37.*x.^2)/70)).*(-25+exp((3.*x.^2)/7).*(-30+x.^2));
+h = @(x) 1/25.*exp (-((37.*x.^2)/70)).*(-25+exp ((3.*x.^2)/7).*(-30+x.^2));
 kind = 2;
 A=@(x) (exp(x.^2/14));
 
@@ -62,14 +64,14 @@ for k=2:l
     Merr(k-1,:)=[2^k max(err(:,k-1))];
 end
 exTime = toc(time);
-fprintf('Table:\n\n');
+fprintf('Table:\n \n');
 fprintf('m & j & cond(A_m) & err_m \n');
 for k=1:l-1
-    fprintf('%d \t & %d \t & %.4e \t & %.2e \t ',M(k,1),M(k,2),M(k,3),Merr(k,2))
+    fprintf('% d \t & % d \t & % .4e \t & % .2e \t ',M(k,1),M(k,2),M(k,3),Merr(k,2))
     fprintf('\n')
 end
 fprintf('\n')
-fprintf('Trend of absolute errors\n\n');
+fprintf('Trend of absolute errors \n \n');
 figure(1)
 x=M(1:l-1,2);
 y=Merr(:,2);
@@ -80,5 +82,5 @@ xlim([x(1),x(end)])
 xlabel('2 j')
 ylabel('e_{m}(f)')
 xticks(x)
-fprintf('Execution time: %.4f s', exTime);
-fprintf('\n\n');
+fprintf('Execution time: % .4f s', exTime);
+fprintf('\n \n');
