@@ -8,7 +8,8 @@ In this toolbox we propose a main algorithm, for approximating the solutions of 
 The software implements a numerical method developed in the following two very recent papers:
 
 [1] M.C. De Bonis, V. Sagaria, Numerical method for boundary value problems on the real line. Appl. Numer. Math., vol. 200, (2024), 179–194
-[2] M.C. De Bonis, V. Sagaria, A new Nyström method for solving boundary value problems on the real axis, submitted 2025
+[2] M.C. De Bonis, V. Sagaria, A new Nyström method for solving boundary value problems on the real axis, Journal of Computational and Applied Mathematics, vol. 478, (2026)
+
 
 The algorithms implemented here are described in detail in: 
 
@@ -18,13 +19,13 @@ The algorithms implemented here are described in detail in:
 GETTING STARTED
 Run
 
->> BVP_demo1   (Figure (1) (right) from [2])
+>> BVP_demo1   (Figure (2) from [2])
 
->> BVP_demo1_1 (Table 1 and Figure 1 (left) from [2])
+>> BVP_demo1_1 (Table 3 from [2])
 
->> BVP_demo2   (Figure 3 (right) from [2])
+>> BVP_demo2   (Figure 3 from [2])
 
->> BVP_demo2_1 (Table  5 and Figure 3 (left) from [2])
+>> BVP_demo2_1 (Table  4 from [2])
 
 >> BVP_demo3   (Graph of the approximate solution)
 
