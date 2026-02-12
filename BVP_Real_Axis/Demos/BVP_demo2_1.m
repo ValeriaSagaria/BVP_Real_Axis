@@ -37,7 +37,7 @@ kind = 2;
 A = @(x) (1./(x.^8+5).*exp(x.^2/2)); 
 
 % row array of the evaluation points
-t=[linspace(-6,-0.1,15000) linspace(0.1,6,15000)];
+t=linspace(-6,6);
 time=tic;
 l = 9;
 M=zeros(l,length(t)+3);
@@ -81,4 +81,5 @@ ylabel('e_m (f)')
 xticks(x)
 fprintf('Execution time: % .4f s', exTime);
 fprintf('\n \n');
+
 
