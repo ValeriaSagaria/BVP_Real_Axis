@@ -1,5 +1,3 @@
-(* ::Package:: *)
-
 %--------------------------------------------------------------------------
 % BVP_demo1 _ 1:  
 %
@@ -84,3 +82,4 @@ ylabel('e_{m}(f)')
 xticks(x)
 fprintf('Execution time: % .4f s', exTime);
 fprintf('\n \n');
+
