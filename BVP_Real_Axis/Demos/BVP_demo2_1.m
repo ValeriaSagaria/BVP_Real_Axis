@@ -1,5 +1,3 @@
-(* ::Package:: *)
-
 %--------------------------------------------------------------------------
 % BVP_demo2 _ 1:  
 %
@@ -31,6 +29,7 @@ clear
 close all
 
 fprintf('Welcome to BVP demo #2 _ 1\n \n');
+addpath('..');
 
 % h(t), kind and A(x)=(mu a(x)-1)*exp(x^2/2)
 h = @(x) (abs (x).^(13/2).*exp(-3*x.^2/2));
@@ -82,3 +81,4 @@ ylabel('e_m (f)')
 xticks(x)
 fprintf('Execution time: % .4f s', exTime);
 fprintf('\n \n');
+
