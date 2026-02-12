@@ -32,6 +32,7 @@ clear
 close all
 
 fprintf('Welcome to BVP demo #3\n\n');
+addpath('..');
 
 % (h(x)+mu*b*a(x)), kind, A(x)=(mu a(x)-1)*exp(x^2/2) and b
 h = @(x) (exp(-11*x.^2/(10)).*(-2+4*exp(x.^2/(10)).*(-1+x.^2)));
@@ -57,4 +58,5 @@ xlabel('t')
 xlim([t(1),t(end)])
 ylabel('f_{512}(t)')
 fprintf('Execution time for evaluating f_{512}(t): %.4f s', exTime);
+
 fprintf('\n\n');
