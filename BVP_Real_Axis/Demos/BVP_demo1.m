@@ -1,5 +1,3 @@
-(* ::Package:: *)
-
 %--------------------------------------------------------------------------
 % BVP_demo1:  
 %
@@ -32,6 +30,7 @@ clear
 close all
 
 fprintf('Welcome to BVP demo #1 \n \n');
+addpath('..');
 
 % h(t), kind and A(x)=(mu a(x)-1)*exp(x^2/2)
 h = @(x) 1/25.*exp (-((37.*x.^2)/70)).*(-25+exp ((3.*x.^2)/7).*(-30+x.^2));
@@ -58,3 +57,4 @@ ylabel('f_{512}(t)')
 
 fprintf('Execution time for evaluating f_{512}(t): % .4f s', exTime);
 fprintf('\n \n');
+
