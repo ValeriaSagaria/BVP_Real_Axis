@@ -35,10 +35,10 @@ fprintf('Welcome to BVP demo #3_1\n\n');
 addpath('..');
 
 % (h(x)+mu*b*a(x)), kind, A(x)=(mu a(x)-1)*exp(x^2/2) and b
-h = @(x) (exp(-11*x.^2/(10)).*(-2+4*exp(x.^2/(10)).*(-1+x.^2)));
+h = @(x) (-2*exp(-11*x.^2/(10))+4*exp (-x.^2).*(-1+x.^2));
 kind = 2;
-A=@(x) (2*exp((2*x.^2)/5)+exp(x.^2/2));
-b=4;
+A = @(x) (2*exp((2*x.^2)/5)+exp(x.^2/2));
+b = 4;
 
 % row array of the evaluation points
 t = linspace(-2,2,30000);
@@ -87,3 +87,4 @@ xticks(x)
 fprintf('Execution time: %.4f s', exTime);
 
 fprintf('\n\n');
+
